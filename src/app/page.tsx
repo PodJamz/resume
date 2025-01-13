@@ -143,7 +143,6 @@ export default function Page() {
                   description={project.description}
                   dates={project.dates}
                   tags={project.technologies}
-                  links={project.links}
                 />
               </BlurFade>
             ))}

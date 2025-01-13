@@ -279,6 +279,13 @@ export const DATA = {
         "Microsoft Translator",
       ],
       image: "/path/to/image.jpg",
+      links: [
+        {
+          type: "Website",
+          href: "https://iamai-research.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        }
+      ],
     },
     {
       title: "Infinity School Dublin",
