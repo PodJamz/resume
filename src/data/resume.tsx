@@ -278,6 +278,7 @@ export const DATA = {
         "Mapbox",
         "Microsoft Translator",
       ],
+      image: "/path/to/image.jpg",
     },
     {
       title: "Infinity School Dublin",

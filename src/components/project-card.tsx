@@ -8,8 +8,8 @@ interface Props {
   dates: string;
   tags: readonly string[];
   link?: string;
-  image?: string;
-  video?: string;
+  image?: string | undefined;
+  video?: string | undefined;
   links?: readonly {
     icon: React.ReactNode;
     type: string;
