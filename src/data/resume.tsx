@@ -8,9 +8,9 @@ export const DATA = {
   location: "Dublin, Ireland",
   locationLink: "https://www.google.com/maps/place/dublin+ireland",
   description:
-    "Bilingual professional (English & Portuguese) with 14+ years of experience spanning Entrepreneurship and Startups, AI, product management and strategy, software development, and business growth.",
+    "Bilingual professional (English & Portuguese) with 12+ years of experience spanning Entrepreneurship and Startups, AI, product management and strategy, software development, and business growth.",
   summary:
-    "During my son’s first year, I realized I needed to show up fully for myself and him, so I left my job as a Facilities Engineer and leapt into startups and emerging technologies. I founded an AR venture, Voalá Immersive Technology, and have since driven product development and AI-driven innovation at multiple early-stage startups in Ireland and beyond. Right now, I’m working on IAMAI, an experimental research assistant designed to give people “AI superpowers,” while also consulting for a stealth startup. My passion is building impactful products, leading user-centric design, and scaling globally—all in service of a mission-driven approach to technology.",
+    "During my son's first year, I decided I needed to do him proud by being my best self, so I quit my job as a Facilities Engineer and dove headfirst into startups and technology. I built Voalá Immersive Technology (an AR startup) and have since worked in multiple early-stage startups in Ireland and abroad. I hold a Postgraduate Degree in Software Entrepreneurship & Startup Creation and have extensive experience leading startup product development, building AI-driven solutions, and driving cross-functional collaboration. Currently, I'm developing IAMAI, an AI-powered research assistant. I thrive on user-centric design, front-end development, and strategic planning for global markets.",
   avatarUrl: "/me.png",
   skills: [
     "Creativity",
@@ -278,7 +278,6 @@ export const DATA = {
         "Mapbox",
         "Microsoft Translator",
       ],
-      image: "/path/to/image.jpg",
       links: [
         {
           type: "Website",
@@ -286,6 +285,8 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         }
       ],
+      image: "",
+      video: "",
     },
     {
       title: "Infinity School Dublin",
@@ -300,6 +301,15 @@ export const DATA = {
         "Community Organizing",
         "Inclusive Education",
       ],
+      links: [
+        {
+          type: "Website",
+          href: "https://www.instagram.com/infinityschooldublin/",
+          icon: <Icons.globe className="size-3" />,
+        }
+      ],
+      image: "",
+      video: "",
     },
   ],
   hackathons: [
