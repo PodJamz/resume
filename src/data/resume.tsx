@@ -4,13 +4,13 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 export const DATA = {
   name: "James Spalding",
   initials: "JS",
-  url: "https://jamesspalding.com",
+  url: "https://jamesspalding.vercel.app/",
   location: "Dublin, Ireland",
   locationLink: "https://www.google.com/maps/place/dublin+ireland",
   description:
     "Bilingual professional (English & Portuguese) with 12+ years of experience spanning Entrepreneurship and Startups, AI, product management and strategy, software development, and business growth.",
   summary:
-    "During my son's first year, I decided I needed to do him proud by being my best self, so I quit my job as a Facilities Engineer and dove headfirst into startups and technology. I built Voalá Immersive Technology (an AR startup) and have since worked in multiple early-stage startups in Ireland and abroad. I hold a Postgraduate Degree in Software Entrepreneurship & Startup Creation and have extensive experience leading startup product development, building AI-driven solutions, and driving cross-functional collaboration. Currently, I'm developing IAMAI, an AI-powered research assistant. I thrive on user-centric design, front-end development, and strategic planning for global markets.",
+    "Back in 2018, during my son's first year, I became determined to do him proud by doing what I love. I quit my job as a Facilities Engineer and dove headfirst into startups and technology. I went on to build Voalá Immersive Technology (an AR startup) and have since worked in multiple early-stage startups in Ireland and abroad. I hold a Postgraduate Degree in Software Entrepreneurship & Startup Creation and thrive leading startup product development, building AI-driven solutions, and driving cross-functional collaboration. Currently, I'm working as Head of Product in a stealth startup in Medical AI. I'm also developing IAMAI, an to give AI superpowers to all. I especially enjoy working on user-centric design, front-end development, and strategic planning for global markets.",
   avatarUrl: "/me.png",
   skills: [
     "Creativity",
@@ -81,7 +81,7 @@ export const DATA = {
       logoUrl:
         "https://miai.law/wp-content/uploads/2024/08/footer-logo-new-1.png",
       start: "Nov 2024",
-      end: "Present",
+      end: "Jan 2025",
       description:
         "Driving front-end development for an AI Legal Research System, focusing on scalable and efficient solutions for Big Law in Australia.",
     },
@@ -264,7 +264,7 @@ export const DATA = {
       dates: "2025",
       active: true,
       description:
-        "An advanced AI-powered search interface built with xAI's Grok model, featuring voice interactions through ElevenLabs, real-time weather data, flight tracking, and multi-modal capabilities. Integrates multiple APIs for comprehensive search results including maps, translations, and media content.",
+        "Phase 1 of giving AI superpowers to all is an advanced AI-powered research interface built with xAI's Grok model, featuring voice interactions through ElevenLabs, real-time weather data, flight tracking, and multi-modal capabilities. Integrates multiple APIs for comprehensive search results including maps, translations, and media content.",
       technologies: [
         "Next.js 14",
         "TypeScript",
@@ -285,7 +285,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         }
       ],
-      image: "",
+      image: "/iamai-research.png",
       video: "",
     },
     {
@@ -308,7 +308,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         }
       ],
-      image: "",
+      image: "/infinity-school.png",
       video: "",
     },
   ],
