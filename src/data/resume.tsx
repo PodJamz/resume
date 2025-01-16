@@ -8,14 +8,15 @@ export const DATA = {
   location: "Dublin, Ireland",
   locationLink: "https://www.google.com/maps/place/dublin+ireland",
   description:
-    "Bilingual professional (English & Portuguese) with 12+ years of experience spanning Entrepreneurship and Startups, AI, product management and strategy, software development, and business growth.",
+    "Bilingual Creative Technologist with 12+ years of experience spanning Entrepreneurship and Startups, AI, Product Management and Strategy, Software Development, and business growth.",
   summary:
-    "Back in 2018, during my son's first year, I became determined to do him proud by doing what I love. I quit my job as a Facilities Engineer and dove headfirst into startups and technology. I went on to build Voalá Immersive Technology (an AR startup) and have since worked in multiple early-stage startups in Ireland and abroad. I hold a Postgraduate Degree in Software Entrepreneurship & Startup Creation and thrive leading startup product development, building AI-driven solutions, and driving cross-functional collaboration. Currently, I'm working as Head of Product in a stealth startup in Medical AI. I'm also developing IAMAI, an to give AI superpowers to all. I especially enjoy working on user-centric design, front-end development, and strategic planning for global markets.",
+    "Back in 2018, during my son's first year, I became determined to do him proud by doing what I love. I'm a very mission driven person and I left my job as a Facilities Engineer and dove headfirst into startups and technology. I went on to build Voalá Immersive Technology (an AR startup) and have since worked in multiple early-stage startups in Ireland and abroad. I thrive leading startup product development, building AI-driven solutions, and driving cross-functional collaboration. Currently, I'm working as Head of Product in a stealth startup in Medical AI. I'm also developing IAMAI, an to give AI superpowers to all. I especially enjoy working on user-centric design, front-end development, and strategic planning for global markets.",
   avatarUrl: "/me.png",
   skills: [
     "Creativity",
     "Music Production",
     "Video Production",
+    "Artificial Intelligence",
     "Generative AI",
     "Adobe Premiere Pro",
     "React",
