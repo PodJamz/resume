@@ -10,7 +10,7 @@ export const DATA = {
   description:
     "Bilingual Creative Technologist with 12+ years of experience spanning Entrepreneurship and Startups, AI, Product Management and Strategy, Software Development, and business growth.",
   summary:
-    "Back in 2018, during my son's first year, I became determined to do him proud by doing what I love. I'm a very mission driven person and I left my job as a Facilities Engineer and dove headfirst into startups and technology. I went on to build Voalá Immersive Technology (an AR startup) and have since worked in multiple early-stage startups in Ireland and abroad. I thrive leading startup product development, building AI-driven solutions, and driving cross-functional collaboration. Currently, I'm working as Head of Product in a stealth startup in Medical AI. I'm also developing IAMAI, a creative project with the long term vison to give AI superpowers to all. I especially enjoy working on user-centric design, front-end development, and strategic planning for global markets.",
+    "Back in 2018, during my son's first year, I made the decision to align my career with my passions and values, striving to build meaningful technology and solve real-world problems. I'm mission-driven and left my job as a Facilities Engineer to dive headfirst into startups and technology. I founded Voalá Immersive Technology, where I led product vision and development, delivering innovative AR solutions, and have since worked in multiple early-stage startups in Ireland and abroad. I excel at guiding startup product development, delivering practical AI-powered solutions, and fostering strong collaboration across diverse teams. Currently, I'm consulting as Head of Product in multiple stealth startups spanning multiple areas in AI. I specialize in user-centered design, refined front-end development, and creating strategic plans that scale across international markets.",
   avatarUrl: "/me.png",
   skills: [
     "Creativity",
@@ -74,6 +74,18 @@ export const DATA = {
 
   work: [
     {
+      company: "Multiple Stealth AI Startups",
+      href: "",
+      badges: [],
+      location: "Remote, Ireland",
+      title: "AI Product Strategy Consultant",
+      logoUrl: "🥷",
+      start: "Jan 2025",
+      end: "Present",
+      description:
+        "Providing expert consulting to multiple stealth-mode AI startups, drawing on a proven track record of developing AI-driven product strategies and crafting advanced front-end solutions. Leading initiatives that transform innovative ideas into actionable, scalable products. Working closely with cross-functional teams to ensure seamless integration of AI technologies, optimizing both user experience and technical architecture.",
+    },
+    {
       company: "MiAI Law",
       href: "https://miai.law/",
       badges: [],
@@ -84,7 +96,7 @@ export const DATA = {
       start: "Nov 2024",
       end: "Jan 2025",
       description:
-        "Driving front-end development for an AI Legal Research System, focusing on scalable and efficient solutions for Big Law in Australia.",
+        "Delivered impactful front-end development for a cutting-edge AI Legal Research System. Focused on scalable, high-efficiency solutions tailored to the needs of top-tier law firms in Australia.",
     },
     {
       company: "MarketSizer",
@@ -97,7 +109,7 @@ export const DATA = {
       start: "Mar 2024",
       end: "Oct 2024",
       description:
-        "Led product acceleration, iterative process improvements, and front-end development in Next.js/React. Facilitated workshops on product strategy and user journeys.",
+        "Spearheaded product acceleration and strategic growth initiatives. Delivered expert guidance on product strategy, user journey optimization, and agile front-end development.",
     },
     {
       company: "Emergegen AI",
@@ -110,7 +122,7 @@ export const DATA = {
       start: "Dec 2023",
       end: "Mar 2024",
       description:
-        "Orchestrated AI roadmaps for global financial and music industry clients. Oversaw front-end development, product management, and executive-level strategy.",
+        "Directed comprehensive AI roadmaps across diverse industries. Led executive strategy sessions, front-end product development, and cross-disciplinary innovation for financial and music sectors.",
     },
     {
       company: "ESW",
@@ -122,7 +134,7 @@ export const DATA = {
       start: "Nov 2022",
       end: "Dec 2023",
       description:
-        "Analyzed tech trends to shape product strategy. Spearheaded AI workshops, influenced executive decisions, and initiated intrapreneurial solutions.",
+        "Influenced product direction through in-depth trend analysis. Designed and conducted AI workshops that shaped strategic decisions and inspired innovative approaches within the organization.",
     },
     {
       company:
@@ -136,7 +148,7 @@ export const DATA = {
       start: "Dec 2022",
       end: "Present",
       description:
-        "Advising on the national strategy for autistic and neurodivergent communities, focusing on innovation and empowerment. Currently contributing to the implementation of the Autism Innovation Strategy.",
+        "Providing forward-thinking advice on national policy, driving progress in autism innovation. Actively shaping a more inclusive, empowered environment for neurodivergent communities.",
     },
     {
       company: "Vstage",
@@ -148,7 +160,7 @@ export const DATA = {
       start: "Mar 2022",
       end: "Sep 2022",
       description:
-        "Accelerated AR/VR capabilities, built an AR product line, and ran agile sprints. Owned product roadmap and guided cross-functional teams.",
+        "Revitalized product capabilities by building an innovative AR product line. Managed agile workflows, defined strategic roadmaps, and guided multi-functional teams to success.",
     },
     {
       company: "Voalá Immersive Technology",
@@ -160,7 +172,7 @@ export const DATA = {
       start: "Feb 2019",
       end: "Jan 2022",
       description:
-        "Founded AR-focused startup. Secured funding, delivered cutting-edge solutions, and led product vision, software dev, and go-to-market strategy.",
+        "Founded and led a pioneering AR startup. Secured key funding, steered product vision, drove software development, and executed a strategic go-to-market plan.",
     },
     {
       company: "NICB (Dublin City University)",
@@ -172,7 +184,7 @@ export const DATA = {
       start: "Jul 2017",
       end: "Oct 2018",
       description:
-        "Provided technical support, maintenance, and calibration of laboratory equipment. Ensured safety compliance.",
+        "Ensured the reliability and compliance of cutting-edge laboratory equipment. Delivered essential technical support, maintaining a safe, efficient research environment.",
     },
     {
       company: "TOMRA Sorting Food",
@@ -184,7 +196,7 @@ export const DATA = {
       start: "Apr 2016",
       end: "Apr 2017",
       description:
-        "Led market analysis, generating leads and mapping competitor info. Influenced expansion decisions into South American markets.",
+        "Strategized market expansion into Latin America through detailed competitor mapping and lead generation. Influenced high-level decisions on regional growth.",
     },
     {
       company: "Financial Way Group LLC",
@@ -196,7 +208,7 @@ export const DATA = {
       start: "Apr 2015",
       end: "Apr 2016",
       description:
-        "Sourced and negotiated with Brazilian product suppliers for Polish clients. Managed legal aspects of Brazilian trades.",
+        "Streamlined international trade operations by identifying reliable suppliers and negotiating favorable terms. Navigated complex legal frameworks to secure successful trade outcomes.",
     },
     {
       company: "Pracatum",
@@ -208,7 +220,7 @@ export const DATA = {
       start: "Jul 2011",
       end: "Dec 2015",
       description:
-        "Developed and taught English courses. Managed blended learning IT infrastructure, offered translation and interpreting services.",
+        "Developed and implemented English language programs integrated with state-of-the-art learning technology. Enhanced educational outcomes through innovative course designs and IT solutions.",
     },
     {
       company: "ReLOVEution",
@@ -220,7 +232,7 @@ export const DATA = {
       start: "Jun 2008",
       end: "Dec 2011",
       description:
-        "Oversaw bookings, tours, and album recordings. Managed payroll and brand strategies for the band.",
+        "Directed all facets of band management, from booking and payroll to branding and tours. Strengthened the group's market presence through strategic planning and marketing initiatives.",
     },
   ],
   education: [
