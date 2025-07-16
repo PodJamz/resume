@@ -7,8 +7,6 @@ export const DATA = {
   url: "https://jamesspalding.vercel.app/",
   location: "Dublin, Ireland",
   locationLink: "https://www.google.com/maps/place/dublin+ireland",
-  description:
-    "Bilingual creative technologist and Product Builder passionate about superpowered AI workflows that bring visions to reality through innovative technology.",
   summary: `Bilingual Creative Technologist and Product Designer/Builder/Developer/Engineer/Architect who loves to superpower my workflow using the latest AI powered tools such as Cursor IDE.
 
 Over 12+ years, I’ve gradually specialized in a range of disciplines (design, engineering, product, and AI) so I can deliver more value in a technology landscape that’s always evolving. My approach is to learn by doing: with each project and role, I’ve added new skills to my toolkit, always focused on solving real problems for real people.

@@ -1,3 +1,5 @@
+'use client';
+
 import { cn } from '@/lib/utils';
 import { AnimatePresence, motion } from 'framer-motion';
 import type { TargetAndTransition, Variants } from 'framer-motion';
@@ -112,8 +114,8 @@ const AnimationComponent: React.FC<{
       </motion.span>
     ) : (
       <motion.span className='inline-block whitespace-pre'>
-        {/* eslint-disable-next-line react/no-array-index-key */}
         {segment.split('').map((char, charIndex) => (
+          /* eslint-disable-next-line react/no-array-index-key */
           <motion.span
             key={`char-${charIndex}`}
             aria-hidden='true'
