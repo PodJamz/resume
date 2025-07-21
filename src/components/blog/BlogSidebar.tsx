@@ -20,6 +20,16 @@ export const BlogSidebar: React.FC<BlogSidebarProps> = ({ items }) => {
   const currentSlug = pathname?.split("/").pop();
   const [isCollapsed, setIsCollapsed] = useState(false);
 
+  const renderPostIcon = (item: SidebarItem) => {
+    return (
+      <span
+        className={`w-8 h-8 rounded-full bg-gradient-to-br ${item.gradient} flex items-center justify-center transition-all duration-200`}
+      >
+        <span className="w-4 h-4 bg-white/60 rounded-full" />
+      </span>
+    );
+  };
+
   return (
     <aside className={`${isCollapsed ? 'w-20' : 'w-[280px]'} min-h-screen flex flex-col justify-between bg-white dark:bg-zinc-900 border-r border-zinc-200 dark:border-zinc-800 p-4 transition-all duration-300 ease-in-out`}>
       <div>
@@ -48,13 +58,9 @@ export const BlogSidebar: React.FC<BlogSidebarProps> = ({ items }) => {
                   scroll={false}
                   style={{ marginBottom: 8 }}
                 >
-                  <span
-                    className={`w-8 h-8 rounded-full bg-gradient-to-br ${item.gradient} flex items-center justify-center transition-all duration-200 ${isActive ? "ring-2 ring-indigo-400 dark:ring-purple-500" : ""}`}
-                    style={{ minWidth: 32, minHeight: 32 }}
-                  >
-                    {/* Placeholder icon */}
-                    <span className="w-5 h-5 bg-white/60 rounded-full" />
-                  </span>
+                  <div className={`transition-all duration-200 ${isActive ? "ring-2 ring-indigo-400 dark:ring-purple-500 rounded-full" : ""}`}>
+                    {renderPostIcon(item)}
+                  </div>
                   <span className="flex-1 flex items-center" style={{ minHeight: 32 }}>{item.title}</span>
                 </Link>
               );
@@ -75,11 +81,7 @@ export const BlogSidebar: React.FC<BlogSidebarProps> = ({ items }) => {
                   scroll={false}
                   title={item.title}
                 >
-                  <span
-                    className={`w-8 h-8 rounded-full bg-gradient-to-br ${item.gradient} flex items-center justify-center transition-all duration-200`}
-                  >
-                    <span className="w-4 h-4 bg-white/60 rounded-full" />
-                  </span>
+                  {renderPostIcon(item)}
                 </Link>
               );
             })}

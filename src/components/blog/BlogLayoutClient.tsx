@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useMemo } from "react";
+import { usePathname } from "next/navigation";
 import { BlogSidebar } from "@/components/blog/BlogSidebar";
 import { TopBar } from "@/components/blog/TopBar";
 import { RightSidebar } from "@/components/blog/RightSidebar";
@@ -27,21 +28,19 @@ interface SidebarItem {
   isActive: boolean;
 }
 
-interface Bookmark {
-  title: string;
-  gradient: string;
-  description: string;
-}
-
 interface BlogLayoutClientProps {
   children: React.ReactNode;
   posts: BlogPost[];
   sidebarItems: SidebarItem[];
-  bookmarks: Bookmark[];
+  bookmarks: any[]; // Keep for backward compatibility but not used
 }
 
-export function BlogLayoutClient({ children, posts, sidebarItems, bookmarks }: BlogLayoutClientProps) {
+export function BlogLayoutClient({ children, posts, sidebarItems }: BlogLayoutClientProps) {
   const [searchQuery, setSearchQuery] = useState("");
+  const pathname = usePathname();
+  
+  // Extract post slug from current path
+  const currentPostSlug = pathname?.startsWith('/blog/') ? pathname.split('/blog/')[1] : undefined;
 
   // Filter posts based on search query
   const filteredPosts = useMemo(() => {
@@ -136,10 +135,12 @@ export function BlogLayoutClient({ children, posts, sidebarItems, bookmarks }: B
           )}
         </main>
         
-        {/* Right Sidebar - Hidden on mobile and tablet */}
-        <div className="hidden xl:flex flex-shrink-0">
-          <RightSidebar bookmarks={bookmarks} />
-        </div>
+        {/* Right Sidebar - Hidden on mobile and tablet, only show for individual posts */}
+        {currentPostSlug && (
+          <div className="hidden xl:flex flex-shrink-0">
+            <RightSidebar postSlug={currentPostSlug} />
+          </div>
+        )}
       </div>
     </div>
   );

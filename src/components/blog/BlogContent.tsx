@@ -1,27 +1,43 @@
 import React from "react";
+import HalftoneWave from "./HalftoneWave";
+import CursorIDEHero from "./CursorIDEHero";
 
 interface BlogContentProps {
   heroImageGradient: string;
   imageCaption?: string;
   children: React.ReactNode;
+  postSlug?: string;
 }
 
-export const BlogContent: React.FC<BlogContentProps> = ({ heroImageGradient, imageCaption, children }) => {
+export const BlogContent: React.FC<BlogContentProps> = ({ heroImageGradient, imageCaption, children, postSlug }) => {
+  
+  const renderHeroExperience = () => {
+    switch (postSlug) {
+      case 'Cursor':
+        return <CursorIDEHero className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px]" />;
+      case 'ND-AI':
+        return <HalftoneWave className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl sm:rounded-3xl" />;
+      default:
+        return (
+          <div
+            className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl bg-gradient-to-br transform hover:scale-[1.02] transition-transform duration-500"
+            style={{ background: heroImageGradient }}
+            aria-label="Hero image"
+          />
+        );
+    }
+  };
   return (
     <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-0">
-      {/* Hero Image */}
-      <div className="mb-8 sm:mb-12 lg:mb-16">
-        <div
-          className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl bg-gradient-to-br transform hover:scale-[1.02] transition-transform duration-500"
-          style={{ background: heroImageGradient }}
-          aria-label="Hero image"
-        />
-        {imageCaption && (
-          <figcaption className="text-center text-sm text-zinc-500 dark:text-zinc-400 mt-4 sm:mt-6 italic font-medium px-4">
-            {imageCaption}
-          </figcaption>
-        )}
-      </div>
+              {/* Hero Experience */}
+        <div className="mb-8 sm:mb-12 lg:mb-16">
+          {renderHeroExperience()}
+          {imageCaption && (
+            <figcaption className="text-center text-sm text-zinc-500 dark:text-zinc-400 mt-4 sm:mt-6 italic font-medium px-4">
+              {imageCaption}
+            </figcaption>
+          )}
+        </div>
 
       {/* Content with editorial styling using Tailwind classes */}
       <div className="prose prose-base sm:prose-lg dark:prose-invert max-w-none prose-zinc prose-indigo">

@@ -42,6 +42,7 @@ export default async function BlogPage() {
           <BlogContent 
             heroImageGradient={gradient || "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"} 
             imageCaption={undefined}
+            postSlug={latestPost.slug}
           >
             <div dangerouslySetInnerHTML={{ __html: latestPost.source }} />
           </BlogContent>

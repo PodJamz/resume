@@ -34,6 +34,7 @@ export default async function Blog({
           <BlogContent 
             heroImageGradient={gradient || "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"} 
             imageCaption={undefined}
+            postSlug={post.slug}
           >
             <div dangerouslySetInnerHTML={{ __html: post.source }} />
           </BlogContent>
