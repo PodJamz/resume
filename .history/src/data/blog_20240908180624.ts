@@ -7,20 +7,11 @@ import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
 
-type Author = {
-  name: string;
-  role: string;
-  gradientClass: string;
-};
-
 type Metadata = {
   title: string;
   publishedAt: string;
   summary: string;
   image?: string;
-  gradient?: string;
-  authors?: Author[];
-  bookmarked?: boolean;
 };
 
 function getMDXFiles(dir: string) {
@@ -52,7 +43,7 @@ export async function getPost(slug: string) {
   const content = await markdownToHTML(rawContent);
   return {
     source: content,
-    metadata: metadata as Metadata,
+    metadata,
     slug,
   };
 }
