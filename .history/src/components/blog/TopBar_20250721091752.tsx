@@ -29,23 +29,6 @@ export const TopBar: React.FC<TopBarProps> = ({ onSearch }) => {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
-  // Close menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setIsMenuOpen(false);
-      }
-    };
-
-    if (isMenuOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [isMenuOpen]);
-
   const handleGoBack = () => {
     if (canGoBack) {
       router.back();
@@ -149,81 +132,8 @@ export const TopBar: React.FC<TopBarProps> = ({ onSearch }) => {
         </form>
       </div>
       
-      {/* Right: Menu, Theme, Comment, and Avatar */}
+      {/* Right: Theme, Comment, and Avatar */}
       <div className="flex items-center gap-2">
-        {/* App menu - Gmail style */}
-        <div className="relative" ref={menuRef}>
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Open app menu"
-            className="w-9 h-9 flex items-center justify-center rounded-xl bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-          >
-            <GripIcon size={18} />
-          </button>
-          
-          {/* Dropdown Menu */}
-          {isMenuOpen && (
-            <div className="absolute right-0 top-12 w-72 bg-white dark:bg-zinc-900 rounded-2xl shadow-xl border border-zinc-200 dark:border-zinc-800 p-4 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-              <div className="grid grid-cols-3 gap-4">
-                {/* App shortcuts - Gmail style */}
-                <div className="flex flex-col items-center p-3 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer">
-                  <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center mb-2">
-                    <svg width="20" height="20" fill="white" viewBox="0 0 24 24">
-                      <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-                    </svg>
-                  </div>
-                  <span className="text-xs text-zinc-700 dark:text-zinc-300 text-center">Blog</span>
-                </div>
-                
-                <div className="flex flex-col items-center p-3 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer">
-                  <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center mb-2">
-                    <svg width="20" height="20" fill="white" viewBox="0 0 24 24">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                    </svg>
-                  </div>
-                  <span className="text-xs text-zinc-700 dark:text-zinc-300 text-center">Projects</span>
-                </div>
-                
-                <div className="flex flex-col items-center p-3 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer">
-                  <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center mb-2">
-                    <svg width="20" height="20" fill="white" viewBox="0 0 24 24">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                    </svg>
-                  </div>
-                  <span className="text-xs text-zinc-700 dark:text-zinc-300 text-center">Resume</span>
-                </div>
-                
-                <div className="flex flex-col items-center p-3 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer">
-                  <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center mb-2">
-                    <svg width="20" height="20" fill="white" viewBox="0 0 24 24">
-                      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                    </svg>
-                  </div>
-                  <span className="text-xs text-zinc-700 dark:text-zinc-300 text-center">Contact</span>
-                </div>
-                
-                <div className="flex flex-col items-center p-3 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer">
-                  <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center mb-2">
-                    <svg width="20" height="20" fill="white" viewBox="0 0 24 24">
-                      <path d="M14.6 16.6l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4zm-5.2 0L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4z"/>
-                    </svg>
-                  </div>
-                  <span className="text-xs text-zinc-700 dark:text-zinc-300 text-center">Code</span>
-                </div>
-                
-                <div className="flex flex-col items-center p-3 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer">
-                  <div className="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center mb-2">
-                    <svg width="20" height="20" fill="white" viewBox="0 0 24 24">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                    </svg>
-                  </div>
-                  <span className="text-xs text-zinc-700 dark:text-zinc-300 text-center">About</span>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-
         {/* Theme selector button */}
         <button
           aria-label="Toggle theme"
