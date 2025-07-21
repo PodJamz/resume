@@ -1,7 +1,6 @@
 import { getBlogPosts } from "@/data/blog";
 import { PostHeader } from "@/components/blog/PostHeader";
 import { BlogContent } from "@/components/blog/BlogContent";
-import { CommentBox } from "@/components/blog/CommentBox";
 
 export const metadata = {
   title: "Blog",
