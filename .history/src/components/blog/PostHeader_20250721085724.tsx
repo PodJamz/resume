@@ -47,12 +47,9 @@ export const PostHeader: React.FC<PostHeaderProps> = ({ title, summary, publishe
               {authors.map((author, index) => (
                 <div key={author.name} className="group relative flex items-center gap-3">
                   {/* Avatar */}
-                  <Avatar className="w-10 h-10 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ring-2 ring-white/20">
-                    <AvatarImage src="/me.png" alt={author.name} className="object-cover" />
-                    <AvatarFallback className={`bg-gradient-to-br ${author.gradientClass} text-white font-semibold text-sm`}>
-                      {getInitials(author.name)}
-                    </AvatarFallback>
-                  </Avatar>
+                  <div className={`w-10 h-10 rounded-full bg-gradient-to-br ${author.gradientClass} flex items-center justify-center text-white font-semibold text-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105`}>
+                    {getInitials(author.name)}
+                  </div>
                   
                   {/* Name and Role */}
                   <div className="flex flex-col">

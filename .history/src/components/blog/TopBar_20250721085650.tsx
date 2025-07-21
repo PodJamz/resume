@@ -143,13 +143,10 @@ export const TopBar: React.FC<TopBarProps> = ({ onSearch }) => {
           <span className="hidden sm:inline">Comment</span>
         </button>
         
-                 {/* Avatar */}
-         <Avatar className="w-8 h-8 sm:w-9 sm:h-9 flex-shrink-0 ring-2 ring-white/20 hover:ring-white/40 transition-all duration-200">
-           <AvatarImage src="/me.png" alt="James Spalding" className="object-cover" />
-           <AvatarFallback className="bg-gradient-to-br from-indigo-400 via-pink-400 to-purple-600 text-white font-semibold text-sm">
-             JS
-           </AvatarFallback>
-         </Avatar>
+        {/* Avatar */}
+        <span className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-gradient-to-br from-indigo-400 via-pink-400 to-purple-600 flex items-center justify-center flex-shrink-0">
+          <span className="w-4 h-4 rounded-full bg-white/60" />
+        </span>
       </div>
     </header>
   );
