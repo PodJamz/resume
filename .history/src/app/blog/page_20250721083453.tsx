@@ -25,10 +25,11 @@ export default async function BlogPage() {
   }
 
   const { title, publishedAt, summary, gradient, authors } = latestPost.metadata;
+  const subtitle = `${summary} | Edited 20 hours ago`;
 
   return (
     <section className="max-w-[800px] mx-auto">
-      <PostHeader title={title} summary={summary} publishedAt={publishedAt} authors={authors || []} />
+      <PostHeader title={title} subtitle={subtitle} authors={authors || []} />
       
       <div className="mb-6">
         <div className="flex items-center gap-2 mb-4">

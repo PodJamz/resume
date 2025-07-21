@@ -87,7 +87,7 @@ export function BlogLayoutClient({ children, posts, sidebarItems, bookmarks }: B
             <div>
               <div className="mb-6">
                 <h2 className="text-sm text-zinc-500 dark:text-zinc-400 mb-4">
-                  {filteredPosts.length} result{filteredPosts.length === 1 ? '' : 's'} for &ldquo;{searchQuery}&rdquo;
+                  {filteredPosts.length} result{filteredPosts.length === 1 ? '' : 's'} for "{searchQuery}"
                 </h2>
               </div>
               {filteredPosts.length > 0 ? (

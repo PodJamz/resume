@@ -38,7 +38,7 @@ export default async function Blog({
             <div dangerouslySetInnerHTML={{ __html: post.source }} />
           </BlogContent>
           
-          <div className="max-w-4xl mx-auto mt-12 sm:mt-16 lg:mt-20">
+          <div className="max-w-4xl mx-auto mt-20">
             <CommentBox postId={post.slug} />
           </div>
         </div>
