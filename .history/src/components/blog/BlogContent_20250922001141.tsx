@@ -20,7 +20,7 @@ export const BlogContent: React.FC<BlogContentProps> = ({ heroImageGradient, ima
       case 'ND-AI':
         return <HalftoneWave className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl sm:rounded-3xl" />;
       case 'design-psychology':
-        return <IrisHero className="w-full" imageSrc="/irishcountryside.png" title="Gather Your Thoughts" subtitle="Save thoughts the moment they appear. Keep them effortlessly organized and never lose an idea." />;
+        return <IrisHero className="w-full" imageSrc="/irishcountryside.png" title="Your Shortcut To Clarity" subtitle="Save thoughts the moment they appear. Keep them effortlessly organized and never lose an idea." />;
       case 'profile':
       case 'james-spalding-profile':
         return (

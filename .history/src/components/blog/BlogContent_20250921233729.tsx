@@ -2,7 +2,6 @@ import React from "react";
 import HalftoneWave from "./HalftoneWave";
 import CursorIDEHero from "./CursorIDEHero";
 import ProfileHero from "@/components/profile/ProfileHero";
-import IrisHero from "./IrisHero";
 
 interface BlogContentProps {
   heroImageGradient: string;
@@ -19,8 +18,6 @@ export const BlogContent: React.FC<BlogContentProps> = ({ heroImageGradient, ima
         return <CursorIDEHero className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px]" />;
       case 'ND-AI':
         return <HalftoneWave className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl sm:rounded-3xl" />;
-      case 'design-psychology':
-        return <IrisHero className="w-full" imageSrc="/irishcountryside.png" title="Gather Your Thoughts" subtitle="Save thoughts the moment they appear. Keep them effortlessly organized and never lose an idea." />;
       case 'profile':
       case 'james-spalding-profile':
         return (
