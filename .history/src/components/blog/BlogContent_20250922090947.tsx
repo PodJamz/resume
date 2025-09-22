@@ -29,7 +29,7 @@ export const BlogContent: React.FC<BlogContentProps> = ({ heroImageGradient, ima
               name="James Spalding"
               title="Systems Analyst & Developer; Product Builder (AI Platforms)"
               location="Dublin, IE"
-              bio="I map messy processes and ship simple, reliable software—scope → PRD → design → build—then add safe, evaluable automation."
+              bio="I map complex processes and ship simple, reliable AI native software. . "
               email="james@jamesspalding.org"
               linkedinHref="https://www.linkedin.com/in/jameslawrencespalding/"
             />
