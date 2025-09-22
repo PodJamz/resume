@@ -20,7 +20,11 @@ export function VaultHeader({ title, summary, isPrivate = false }: VaultHeaderPr
             </p>
           )}
         </div>
-        
+        <div className="flex items-center gap-2">
+          {isPrivate && (
+            
+          )}
+        </div>
       </div>
       <div className="mt-6 h-px bg-gradient-to-r from-transparent via-zinc-200 dark:via-zinc-800 to-transparent" />
     </header>

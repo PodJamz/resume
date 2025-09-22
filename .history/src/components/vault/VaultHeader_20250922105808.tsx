@@ -6,7 +6,7 @@ interface VaultHeaderProps {
   isPrivate?: boolean;
 }
 
-export function VaultHeader({ title, summary, isPrivate = false }: VaultHeaderProps) {
+export function VaultHeader({ title}: VaultHeaderProps) {
   return (
     <header className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-0">
       <div className="flex items-start justify-between gap-4">
