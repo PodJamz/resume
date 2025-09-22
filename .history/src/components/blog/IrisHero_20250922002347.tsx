@@ -9,7 +9,6 @@ interface IrisHeroProps {
   imageSrc?: string
   title?: string
   subtitle?: string
-  interactive?: boolean
 }
 
 // Idea generator (hundreds of unique combos)
@@ -32,7 +31,6 @@ export default function IrisHero({
   imageSrc = "/irishcountryside.png",
   title = "Gather Your Thoughts",
   subtitle = "Save thoughts the moment they appear. Keep them effortlessly organized and never lose an idea.",
-  interactive = true,
 }: IrisHeroProps) {
   const x = useMotionValue(0)
   const y = useMotionValue(0)
@@ -160,8 +158,8 @@ export default function IrisHero({
 
   return (
     <motion.section
-      onMouseMove={interactive ? handlePointerMove : undefined}
-      onMouseLeave={interactive ? handleLeave : undefined}
+      onMouseMove={handlePointerMove}
+      onMouseLeave={handleLeave}
       style={{ perspective: 1200 }}
       className={`relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl ${className}`}
       aria-label="Hero"
@@ -170,7 +168,7 @@ export default function IrisHero({
       <motion.div
         aria-hidden
         className="absolute inset-0"
-        style={{ x: interactive ? translateBgX : 0, y: interactive ? translateBgY : 0 }}
+        style={{ x: translateBgX, y: translateBgY }}
       >
         <Image
           src={imageSrc}
@@ -190,13 +188,13 @@ export default function IrisHero({
       <motion.div
         aria-hidden
         className="absolute -top-16 right-10 h-40 w-40 rounded-full bg-gradient-to-br from-yellow-200/70 to-amber-400/60 blur-2xl"
-        style={{ x: interactive ? translateBgX : 0, y: interactive ? translateBgY : 0 }}
+        style={{ x: translateBgX, y: translateBgY }}
       />
 
       {/* Content card with glassmorphism */}
       <motion.div
         className="relative h-full flex flex-col items-center justify-center px-4"
-        style={{ rotateX: interactive ? rotateX : 0, rotateY: interactive ? rotateY : 0 }}
+        style={{ rotateX, rotateY }}
       >
         <motion.h1
           className="text-center font-extrabold tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-zinc-900 dark:text-white drop-shadow-[0_1px_0_rgba(255,255,255,0.35)] dark:drop-shadow-[0_1px_0_rgba(0,0,0,0.35)]"
