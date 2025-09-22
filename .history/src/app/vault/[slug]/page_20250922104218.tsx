@@ -9,7 +9,7 @@ export default async function VaultPost({ params }: { params: { slug: string } }
   if (!post) notFound();
   const { title, publishedAt, summary } = post.metadata;
 
-  const isProfile = params.slug === "profile" || params.slug === "james-spalding-profile";
+  const isProfile = params.slug === "profile" || post.metadata.slug === "james-spalding-profile";
 
   return (
     <div className="min-h-screen">

@@ -2,14 +2,11 @@ import { getVaultPost } from "@/data/vault";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { VaultHeader } from "@/components/vault/VaultHeader";
-import ProfileHero from "@/components/profile/ProfileHero";
 
 export default async function VaultPost({ params }: { params: { slug: string } }) {
   const post = await getVaultPost(params.slug).catch(() => null);
   if (!post) notFound();
   const { title, publishedAt, summary } = post.metadata;
-
-  const isProfile = params.slug === "profile" || params.slug === "james-spalding-profile";
 
   return (
     <div className="min-h-screen">
@@ -22,20 +19,6 @@ export default async function VaultPost({ params }: { params: { slug: string } }
             </Link>
           </div>
           <VaultHeader title={title} summary={summary} isPrivate />
-
-          {isProfile && (
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-0 mt-6 mb-10">
-              <ProfileHero
-                name="James Spalding"
-                title="Creative Technologist & Product Builder"
-                location="Dublin, IE"
-                bio="I turn messy problems into crisp interfaces and reliable, AI‑native systems."
-                email="james@jamesspalding.org"
-                linkedinHref="https://www.linkedin.com/in/jameslawrencespalding/"
-              />
-            </div>
-          )}
-
           <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-0">
             <div className="prose prose-base sm:prose-lg dark:prose-invert max-w-none prose-zinc">
               <div dangerouslySetInnerHTML={{ __html: post.source }} />
