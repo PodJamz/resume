@@ -1,5 +1,5 @@
 ---
-title: "Way 🌊: A Calm AI You Can Talk To — Built with Streaming, Voice, RAG, and Real‑Time Water"
+title: "Way 🌊: A Calm AI You Can Talk To, Built with Streaming, Voice, RAG, and Real‑Time Water"
 publishedAt: "2025-12-31"
 summary: "A contemplative AI experience inspired by Lao Tzu, built with Next.js, streaming responses, voice AI, RAG, and real-time WebGPU water simulation."
 gradient: "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 25%, #60a5fa 50%, #93c5fd 75%, #dbeafe 100%)"
@@ -11,7 +11,7 @@ bookmarked: true
 image: "/projects/way.png"
 ---
 
-Way is a contemplative AI experience inspired by Lao Tzu. You arrive, you speak or type what's on your mind, and you get a reflective response—while a living "water surface" moves behind the words like a quiet companion. Try it here: [way-lovat.vercel.app](https://way-lovat.vercel.app).
+Way is a contemplative AI experience inspired by Lao Tzu. You arrive, you speak or type what's on your mind, and you get a reflective response, while a living "water surface" moves behind the words like a quiet companion. Try it here: [way-lovat.vercel.app](https://way-lovat.vercel.app).
 
 This is the story of the tech we used to make it feel simple.
 
@@ -24,7 +24,7 @@ Most AI chat apps feel like forms: type → submit → wait. Way aims for someth
 - **Grounded tone** (so it doesn't drift into generic "internet wisdom")
 - **Ambient water** (so the UI feels like a place, not a tool)
 
-## Next.js — the "home" for everything
+## Next.js, the "home" for everything
 
 We built Way with Next.js (App Router) so the UI and server logic can live together cleanly:
 
@@ -32,13 +32,13 @@ We built Way with Next.js (App Router) so the UI and server logic can live toget
 - Server endpoints handle chat streaming and voice-related requests.
 - It deploys cleanly to production without complicated infrastructure.
 
-## Vercel AI SDK — streaming that feels alive
+## Vercel AI SDK, streaming that feels alive
 
 The biggest "feel" upgrade is streaming: the assistant's reply appears as it's being generated.
 
 That tiny difference changes the vibe from "submit a ticket" to "someone is responding." It also keeps the app feeling fast even when the model takes a moment.
 
-## RAG — keeping the reflection anchored
+## RAG, keeping the reflection anchored
 
 A philosophical voice can easily become vague. To keep Way grounded, we use RAG (Retrieval Augmented Generation):
 
@@ -47,9 +47,9 @@ A philosophical voice can easily become vague. To keep Way grounded, we use RAG 
 - On each user message, we retrieve the most relevant passages
 - Then we feed those passages as "context to reflect on," so the response stays close to the source
 
-This is how Way can feel more like it's drawing from a real text—without turning every answer into a quotation dump.
+This is how Way can feel more like it's drawing from a real text, without turning every answer into a quotation dump.
 
-## Convex — the backend brain (including vector search)
+## Convex, the backend brain (including vector search)
 
 Convex powers the backend pieces that make RAG and data workflows practical:
 
@@ -57,16 +57,16 @@ Convex powers the backend pieces that make RAG and data workflows practical:
 - Vector storage + vector search to retrieve relevant passages quickly
 - A solid foundation to expand persistence later (without overbuilding upfront)
 
-## Voice — using the browser's native speech tools
+## Voice, using the browser's native speech tools
 
 Way supports voice through browser capabilities:
 
 - Speech-to-text to capture what you say
 - Text-to-speech (where supported) to speak the reflection back
 
-The goal isn't "voice assistant" energy—it's more like speaking into still water and hearing it answer.
+The goal isn't "voice assistant" energy, it's more like speaking into still water and hearing it answer.
 
-## WebGPU + WGSL — the water isn't a video, it's real-time graphics
+## WebGPU + WGSL, the water isn't a video, it's real-time graphics
 
 The Waterball background is powered by WebGPU, with shaders written in WGSL. That gives us:
 
