@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import HalftoneWave from "./HalftoneWave";
 import CursorIDEHero from "./CursorIDEHero";
 import ProfileHero from "@/components/profile/ProfileHero";
@@ -21,6 +22,19 @@ export const BlogContent: React.FC<BlogContentProps> = ({ heroImageGradient, ima
         return <HalftoneWave className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl sm:rounded-3xl" />;
       case 'design-psychology':
         return <IrisHero className="w-full" imageSrc="/irishcountryside.png" title="Gather Your Thoughts" subtitle="Save thoughts the moment they appear. Keep them effortlessly organized and never lose an idea." interactive={false} />;
+      case 'way-ai-experience':
+        return (
+          <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl">
+            <Image
+              src="/projects/way.png"
+              alt="Way AI interface showing contemplative water simulation"
+              fill
+              priority
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 1024px"
+            />
+          </div>
+        );
       case 'profile':
       case 'james-spalding-profile':
         return (
