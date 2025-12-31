@@ -2,6 +2,8 @@
 
 This week I built **Way**, a contemplative AI experience inspired by Lao Tzu. You arrive, you speak or type what's on your mind, and you get a reflective response, while a living "water surface" moves behind the words like a quiet companion.
 
+It started after speaking to my friend [Wenmin Sun](https://www.linkedin.com/in/wenmin-sun-ab040326b/) about the Tao. We were discussing the wisdom of Lao Tzu, and I thought: "Hey, I should put something together to make it easy to consult the wisdom of the Tao." And hey presto, here we have it.
+
 Most AI chat apps feel like forms: type → submit → wait. Way aims for something softer. Here's what I learned building it.
 
 ## The Experience We Wanted
