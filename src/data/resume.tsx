@@ -301,6 +301,37 @@ I’m currently very fascinated by rapid prototyping, AI context management, and
   ],
   projects: [
     {
+      title: "Way",
+      href: "https://way-lovat.vercel.app",
+      dates: "2025",
+      active: true,
+      description:
+        "A contemplative AI experience inspired by Lao Tzu, featuring voice interactions (speech-to-text and text-to-speech), streaming responses, RAG-powered grounded reflections from the Tao Te Ching, and a beautiful real-time WebGPU water simulation that serves as the AI entity. Built to showcase how AI can feel like a calm companion rather than a tool.",
+      technologies: [
+        "Next.js 14",
+        "TypeScript",
+        "Vercel AI SDK",
+        "OpenAI",
+        "RAG",
+        "Convex",
+        "WebGPU",
+        "WGSL",
+        "Speech-to-Text",
+        "Text-to-Speech",
+        "Vector Search",
+        "TailwindCSS",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://way-lovat.vercel.app",
+          icon: <Icons.globe className="size-3" />,
+        }
+      ],
+      image: "/projects/way.png",
+      video: "",
+    },
+    {
       title: "IAMAI Research",
       href: "https://iamai-research.vercel.app/",
       dates: "2025",
